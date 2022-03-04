@@ -4,7 +4,10 @@ pipeline {
 
   stages {
     stage('build') {
-        sh app.sh
+      steps {
+          echo '-----run build-----'
+          sh app.sh
+        }
       }
       post {
         success {
