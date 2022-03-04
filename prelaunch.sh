@@ -12,6 +12,9 @@ version=""
 versionCodeSpe=""
 pubspecFile="pubspec.yaml"
 echo 'run2.5----prelaunch.sh-------'
+if [ -e $pubspecFile ]; then
+    echo 'pubspecFile存在'
+fi
 if [ -e $pubspecFile ]
   then
       if [ -r $pubspecFile ]
