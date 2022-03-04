@@ -58,7 +58,6 @@ if [ ! $buildVersionName ]; then
 else
   versionName=$buildVersionName
 fi
-
 time=$(date "+%m%d")
 test=Test
 echo 'run4----prelaunch.sh-------'
