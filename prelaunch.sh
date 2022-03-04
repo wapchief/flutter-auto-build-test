@@ -3,12 +3,11 @@ echo 'run----prelaunch.sh-------'
 echo 'run1----prelaunch.sh-------'
 #获取Git SHA1
 GIT_SHA1=`(git show-ref --head --hash=8 2> /dev/null || echo 00000000) | head -n1`
-echo 'run1获取GitSHA1----prelaunch.sh-------'
 #默认打包类型
 DEFAULT_BUILD_TYPE=release
-echo 'run1DEFAULT_BUILD_TYPE----prelaunch.sh-------'
 #打包类型
-if [ ! "$buildType" ]; then
+if [ ! "$buildType" ]
+then
 type=DEFAULT_BUILD_TYPE
   else
 type=$buildType
