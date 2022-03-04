@@ -1,4 +1,4 @@
-#!/bin/bash -ilex
+#!/bin/bash -i1
 #获取Git SHA1
 GIT_SHA1=`(git show-ref --head --hash=8 2> /dev/null || echo 00000000) | head -n1`
 #默认打包类型

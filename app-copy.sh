@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ilex
 echo 'run1----prelaunch.sh-------'
 #获取Git SHA1
 GIT_SHA1=`(git show-ref --head --hash=8 2> /dev/null || echo 00000000) | head -n1`
