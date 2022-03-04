@@ -10,6 +10,7 @@ if [ ! $buildType ]; then
 type=$DEFAULT_BUILD_TYPE
   else
 type=$buildType
+echo 'run2----prelaunch.sh-------'
 fi
 #获取版本号
 versionCode=""
@@ -34,6 +35,8 @@ if [ -e $pubspecFile ]
 else
    echo "文件不存在"
 fi
+echo 'run3----prelaunch.sh-------'
+
 #对IFS变量 进行替换处理 拆分分号
 OLD_IFS="$IFS"
 IFS=": "
@@ -53,8 +56,11 @@ if [ ! $buildVersionName ]; then
 else
   versionName=$buildVersionName
 fi
+
 time=$(date "+%m%d")
 test=Test
+echo 'run4----prelaunch.sh-------'
+
 #Android 打包
 flutter build apk --$type --obfuscate --split-debug-info=xx --build-name=$versionName --build-number=$versionCode
 #执行 iOS 打包
