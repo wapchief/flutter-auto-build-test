@@ -12,28 +12,9 @@ version=""
 versionCodeSpe=""
 pubspecFile="pubspec.yaml"
 echo 'run2.5----prelaunch.sh-------'
-if [ 0 ]; then
-    echo 'pubspecFile存在'
-fi
+
 echo 'pubspecFile-------'
-if [ -e $pubspecFile ]
-  then
-      if [ -r $pubspecFile ]
-        then
-          if [ -w $pubspecFile ]
-            then
-              #修改文件
-              #webview
-              version=`sed -n '18p'  $pubspecFile`
-          else
-            echo "文件不可写"
-          fi
-      else
-         echo "文件不可读"
-      fi
-else
-   echo "文件不存在"
-fi
+
 echo 'run3----prelaunch.sh-------'
 
 #对IFS变量 进行替换处理 拆分分号
@@ -49,6 +30,8 @@ IFS="$OLD_IFS"
 versionName=${array[0]}
 #versionCode=`expr "${versionName}"|sed "s/\.*//g"`
 versionCode=`expr "${array[1]}"|sed "s/\r//g"`
+echo 'run3.5----prelaunch.sh-------'
+
 #指定版本号
 if [ ! $buildVersionName ]; then
   echo "没有指定版本，默认使用配置文件的版本"
