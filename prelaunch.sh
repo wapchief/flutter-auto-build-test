@@ -8,11 +8,11 @@ echo 'run1获取GitSHA1----prelaunch.sh-------'
 DEFAULT_BUILD_TYPE=release
 echo 'run1DEFAULT_BUILD_TYPE----prelaunch.sh-------'
 #打包类型
-if [ ! $buildType ]; then
-type=$DEFAULT_BUILD_TYPE
-  else
-type=$buildType
-fi
+#if [ ! $buildType ]; then
+type=DEFAULT_BUILD_TYPE
+#  else
+#type=$buildType
+#fi
 echo 'run2----prelaunch.sh-------'
 #获取版本号
 versionCode=""
