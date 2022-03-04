@@ -1,7 +1,6 @@
 echo 'run----prelaunch.sh-------'
 #!/bin/sh
 echo 'run1----prelaunch.sh-------'
-echo $buildVersionName
 #获取Git SHA1
 GIT_SHA1=`(git show-ref --head --hash=8 2> /dev/null || echo 00000000) | head -n1`
 #默认打包类型
@@ -12,9 +11,8 @@ versionCode=""
 version=""
 versionCodeSpe=""
 pubspecFile="pubspec.yaml"
-echo 'pubspecFile-------'
 echo 'run2.5----prelaunch.sh-------'
-if [ -e $pubspecFile ]; then
+if ![ -e $pubspecFile ]; then
     echo 'pubspecFile存在'
 fi
 echo 'pubspecFile-------'
