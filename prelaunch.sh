@@ -5,19 +5,13 @@ echo 'run1----prelaunch.sh-------'
 GIT_SHA1=`(git show-ref --head --hash=8 2> /dev/null || echo 00000000) | head -n1`
 #默认打包类型
 DEFAULT_BUILD_TYPE=release
-#打包类型
-if [ ! "$buildType" ]
-then
-type=DEFAULT_BUILD_TYPE
-  else
-type=$buildType
-fi
 echo 'run2----prelaunch.sh-------'
 #获取版本号
 versionCode=""
 version=""
 versionCodeSpe=""
 pubspecFile="pubspec.yaml"
+echo 'run2.5----prelaunch.sh-------'
 if [ -e $pubspecFile ]
   then
       if [ -r $pubspecFile ]
