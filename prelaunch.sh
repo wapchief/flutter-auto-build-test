@@ -33,11 +33,7 @@ versionCode=`expr "${array[1]}"|sed "s/\r//g"`
 echo 'run3.5----prelaunch.sh-------'
 
 #指定版本号
-if [ ! $buildVersionName ]; then
-  echo "没有指定版本，默认使用配置文件的版本"
-else
-  versionName=$buildVersionName
-fi
+
 
 time=$(date "+%m%d")
 test=Test
