@@ -1,3 +1,4 @@
+#!/bin/bash -ilex
 echo 'run1----prelaunch.sh-------'
 GIT_SHA1=`(git show-ref --head --hash=8 2> /dev/null || echo 00000000) | head -n1`
 DEFAULT_BUILD_TYPE=release
